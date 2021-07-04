@@ -1,0 +1,46 @@
+Documentación oficial:
+https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html
+Strapi Academy: https://academy.strapi.io/
+
+# Requisitos: 
+Instalar mysql o Docker
+Conocimientos de Nodejs y Koa.js: https://koajs.com/	
+Conocimientos de reactjs: https://reactjs.org	
+Video introducción: https://www.youtube.com/watch?v=8B9r8eOje_k	
+
+> Clase 1 (2 hs):
+Introducción y requisitos.
+Instalación y creación de nuevo proyecto..
+Crear un usuario administrador.
+Crear modelos y relaciones, concepto de draft and publish, tipos de datos, relaciones.
+Configuración de vistas de formularios.
+Crear contenido.
+Roles y permisos
+Consumir contenido desde la api.
+
+> Clase 2 (3 hs):
+Estructura del proyecto.
+Configuración obligatoria (DB, server).
+Opcionales: ambientes, variables de entorno, api.
+Introducción a plugins.
+Hooks.
+Middlewares.
+Functions.
+
+> Clase 3 (3 hs): Customización del backend.
+Routing.
+Politicas: globales, de ámbito y de plugins.
+Controllers.
+Request and responses.
+Services.
+Queries.
+Models (zonas dinámicas y componentes repetitivos).
+Webhooks.
+
+> Clase 4 ( 3 hs): Plugins locales.
+https://strapi.io/documentation/developer-docs/latest/development/local-plugins-customization.html#quick-start
+
+> Clase 5 (3 hs): Continuación de plugins locales. CLI y forma de trabajo.
+
+> Ejercicio: Desarrollar con esta guía un plugin de importación siguiendo los pasos: 
+https://strapi.io/blog/how-to-create-an-import-content-plugin-part-1-4
