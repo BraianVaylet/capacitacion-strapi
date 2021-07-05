@@ -8,12 +8,14 @@ import {
 } from 'strapi-helper-plugin'
 import PropTypes from 'prop-types'
 import pluginId from '../../pluginId'
-import UploadFileForm from '../../components/UploadFileForm'
+import { get, has, isEmpty, pickBy, set } from 'lodash'
 
+import UploadFileForm from '../../components/UploadFileForm'
 import Row from '../../components/Row'
 import Block from '../../components/Block'
 import { Select, Label } from '@buffetjs/core'
-import { get, has, isEmpty, pickBy, set } from 'lodash'
+import ExternalUrlForm from '../../components/ExternalUrlForm'
+import RawInputForm from '../../components/RawInputForm'
 
 const getUrl = to => to
   ? `/plugins/${pluginId}/${to}`
@@ -143,10 +145,26 @@ function HomePage () {
               />
             </div>
           </Row>
-          <UploadFileForm
-            onRequestAnalysis={onRequestAnalysis}
-            loadingAnalysis={state.analyzing}
-          />
+          <Row>
+              {state.importSource === 'upload' && (
+                <UploadFileForm
+                  onRequestAnalysis={onRequestAnalysis}
+                  loadingAnalysis={state.analyzing}
+                />
+              )}
+              {state.importSource === 'url' && (
+                <ExternalUrlForm
+                  onRequestAnalysis={onRequestAnalysis}
+                  loadingAnalysis={state.analyzing}
+                />
+              )}
+              {state.importSource === 'raw' && (
+                <RawInputForm
+                  onRequestAnalysis={onRequestAnalysis}
+                  loadingAnalysis={state.analyzing}
+                />
+              )}
+            </Row>
         </Block>
       </div>
     </div>
